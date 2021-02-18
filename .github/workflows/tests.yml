@@ -37,7 +37,7 @@ jobs:
         # Fetch everything to the latest tag
         git fetch --shallow-since=$(git log $VERS -1 --format=%at)
         git log --oneline --all --graph
-        git describe --always --tags
+        git describe --tags
         exit 1
 
     - name: Test
