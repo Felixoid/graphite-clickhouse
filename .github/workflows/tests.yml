@@ -31,7 +31,7 @@ jobs:
     - name: Checkout to the latest code
       run: |
         # Fetch all tags
-        git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+        git fetch --depth=1 --tags
         # Get the latest tag
         VERS=$(git tag -l | sort -Vr | head -n1)
         # Fetch everything to the latest tag
